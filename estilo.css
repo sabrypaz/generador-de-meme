@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/*+++++++++++++SECCION NAVEGADOR++++++++++++*/
+
+.navegacion{
+    width: 100%;
+    background-color: rgb(16, 16, 63);
+    text-align: center;
+   
+}
+
+.tituloProject{
+    color: white;
+    font-size: 2.5em;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.contenedorDeBotones{
+    padding:5px ;
+}
+
+.btnNav{
+    padding: 10px;
+    background: rgb(16, 16, 63);
+    color:white;
+    border:none; 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btnNav:hover{
+    background: rgb(97, 162, 243);
+    border-radius: 3px;
+}
+
+/*+++++++++SECCION CONTENEDOR DE IMAGEN++++++++*/
+
+.contenedorCentral{
+    width: 100%;
+    background: rgb(26, 26, 147);
+}
+
+.contenedorMeme{
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenedorTopText , .contenedorBottomText{
+    width: 100%;
+    background: white;
+    text-align: center;
+    font-size: 3em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding:15px 0px 15px;
+}
+
+.contenedorImagen{
+    width:100%;
+    background: black;
+    height: 400px;
+}
+.contenedorBtnDeDescarga{
+    text-align: center;
+
+}
+.btnDeDescarga{
+    background: green;
+    padding: 10px;
+    margin: 20px;
+    color:white;
+    border-radius:3px;
+    border:none;
+}
+
+/*+++++++++SECCION ASIDE DE TEXTO+++++++*/
+
+.columnaDeTexto{
+    position:absolute;
+    right: 0px;
+    top: 0px;
+    width:250px;
+    height: 100%;
+    background:rgb(50, 50, 220);
+    color:white;
+    padding: 5px;
+}
+
+.fondo{
+   
+}
+
+.tamañoDeFuente{
+    display:flex;
+}
+
+
+
+
+
+
+
+
+
+

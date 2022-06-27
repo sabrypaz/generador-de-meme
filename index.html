@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilo.css">
+    <title>Generador de Memes</title>
+</head>
+
+<body>
+    <header class="navegacion">
+        <h1 class="tituloProject">Generador de Memes</h1>
+        <div class="contenedorDeBotones">
+            <button class="btnNav"><i class="fa-solid fa-file-image"></i>Imagen</button>
+            <button class="btnNav"><i class="fa-solid fa-font"></i>Texto</button>
+            <button class="btnNav"><i class="fa-solid fa-lightbulb"></i>Modo Oscuro</button>
+        </div>
+    </header>
+
+    <main class="contenedorCentral">
+
+        <div class="contenedorMeme">
+
+            <div class="contenedorTopText">
+                <p>TOP TEXT</p>
+            </div>
+
+            <div class="contenedorImagen">
+                <p>imagen</p>
+            </div>
+
+            <div class="contenedorBottomText">
+                <p>BOTTOM TEXT</p>
+            </div>
+
+        </div>
+
+        <div class="contenedorBtnDeDescarga">
+            <button class="btnDeDescarga"><i class="fa-solid fa-download"></i>Descargar Meme</button>
+        </div>
+
+    </main>
+
+    <aside class="columnaDeTexto">
+
+        <button><i class="fa-solid fa-xmark"></i></button>
+
+        <div>
+            <h2 class="tituloDeTexto">TEXTO</h2>
+            
+            <div class="topText"> 
+                <h3>SUPERIOR</h3>   
+                <textarea>TOP TEXT</textarea> 
+
+                <div class="checkboxSuperior">
+                    <input type="checkbox">
+                    <label for="sinTextoSuperior">Sin texto superior</label>
+                </div>
+
+                <div class="bottomText">
+                    <h3>INFERIOR</h3>
+                    <textarea>BOTTOM TEXT</textarea>
+
+                    <div class="checkboxInferior">
+                        <input type="checkbox">
+                        <label for="sinTextoInferior">Sin texto inferior</label>
+                    </div>
+                </div>
+
+                <div class="fuente">
+                    <h3>FUENTE</h3>
+                    <select name="Seleccionar fuente">
+                        <option value="">Arial</option>
+                        <option value="">Arial Black</option>
+                        <option value="">American Typewriter</option>
+                        <option value="">Andale Mono</option>
+                        <option value="">Comic Sans MS</option>
+                        <option value="">Helvética</option>
+                        <option value="">Impact</option>
+                        <option value="">Verdana</option>
+                        <option value="">Times New Roman</option>
+                    </select>
+
+                    <div class="tamañoDeFuente">
+                        <input type="number" name="Tamaño de fuente">
+
+                        <div class="alineacionDeTexto">
+                            <button><i class="fa-solid fa-align-left"></i></button>
+                            <button><i class="fa-solid fa-align-justify"></i></button>
+                            <button><i class="fa-solid fa-align-right"></i></button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>   
+
+        </div>
+
+        <div>
+
+        </div>
+    </aside>
+
+        <div class="direccionDeUrl">
+            <label for="">URL</label><br>
+            <input type="text">
+          </div>
+
+          <div class="fondo">
+           <label for="fondo">FONDO</label><br>
+           <input >
+           <input>
+          </div>
+
+    
+ <script src="app.js"></script>
+</body>
+
+</html>
