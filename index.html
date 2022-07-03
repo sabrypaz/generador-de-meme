@@ -13,49 +13,62 @@
 </head>
 
 <body>
+   <!--++++++++++++++++++++++++++++++++SECCION HEADER+++++++++++++++++++++++++++++++++++-->
+
     <header class="navegacion">
         <h1 class="tituloProject">Generador de Memes</h1>
         <div class="contenedorDeBotones">
-            <button class="btnNav"><i class="fa-solid fa-file-image"></i>Imagen</button>
-            <button class="btnNav"><i class="fa-solid fa-font"></i>Texto</button>
-            <button class="btnNav"><i class="fa-solid fa-lightbulb"></i>Modo Oscuro</button>
+            <button class="btnNav" id="botonImagen"><i class="fa-solid fa-file-image"
+                    aria-hidden="true"></i>Imagen</button>
+            <button class="btnNav" id="botonTexto"><i class="fa-solid fa-font" aria-hidden="true"></i>Texto</button>
+            <button class="btnNav" id="botonModo" aria-label="Cambiar pagina a modo oscuro"><i
+                    class="fa-solid fa-lightbulb"></i>Modo Oscuro</button>
         </div>
     </header>
-
+ <!--+++++++++++++++++++++++++++++++++SECCION CENTRAL DE MEME+++++++++++++++++++++++++++++++++-->
     <main class="contenedorCentral">
 
         <div class="contenedorMeme">
 
-            <div class="contenedorTopText">
+            <div class="contenedorTopText" id="contenedorTopText">
                 <p>TOP TEXT</p>
             </div>
 
-            <div class="contenedorImagen">
-                <p>imagen</p>
+            <div class="contenedorImagen" id="contenedorImagen" aria-label="imagen">
+
             </div>
 
-            <div class="contenedorBottomText">
+            <div class="contenedorBottomText" id="contenedorBottomText">
                 <p>BOTTOM TEXT</p>
             </div>
 
         </div>
 
         <div class="contenedorBtnDeDescarga">
-            <button class="btnDeDescarga"><i class="fa-solid fa-download"></i>Descargar Meme</button>
+            <button type="button" class="btnDeDescarga" id="btnDeDescarga"><i class="fa-solid fa-download"
+                    aria-hidden="true"></i>Descargar Meme</button>
         </div>
 
     </main>
 
-    <aside class="columnaDeTexto">
+ <!--+++++++++++++++++++++++++++++++++SECCION ASIDE++++++++++++++++++++++++++++++++++-->
 
-        <button><i class="fa-solid fa-xmark"></i></button>
+    <aside class="columnaDeTexto" id="columnaDeTexto">
 
-        <div>
-            <h2 class="tituloDeTexto">TEXTO</h2>
-            
-            <div class="topText"> 
-                <h3>SUPERIOR</h3>   
-                <textarea>TOP TEXT</textarea> 
+        <button><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+
+      <!--++++++++++++++++++++++++SECCION CONFIGURACION DE TEXTO++++++++++++++++++++++++--> 
+
+        <section class="seccionDeTexto">
+
+            <h2 class="tituloTexto">TEXTO</h2>
+
+            <div class="opcionesDeColumnaDeTexto">
+
+                <div class="topText">
+                    <h3 class="tituloTexto">SUPERIOR</h3>
+                    <textarea>TOP TEXT</textarea>
+                </div>
 
                 <div class="checkboxSuperior">
                     <input type="checkbox">
@@ -63,7 +76,7 @@
                 </div>
 
                 <div class="bottomText">
-                    <h3>INFERIOR</h3>
+                    <h3 class="tituloTexto">INFERIOR</h3>
                     <textarea>BOTTOM TEXT</textarea>
 
                     <div class="checkboxInferior">
@@ -71,56 +84,212 @@
                         <label for="sinTextoInferior">Sin texto inferior</label>
                     </div>
                 </div>
-
-                <div class="fuente">
-                    <h3>FUENTE</h3>
-                    <select name="Seleccionar fuente">
-                        <option value="">Arial</option>
-                        <option value="">Arial Black</option>
-                        <option value="">American Typewriter</option>
-                        <option value="">Andale Mono</option>
-                        <option value="">Comic Sans MS</option>
-                        <option value="">Helvética</option>
-                        <option value="">Impact</option>
-                        <option value="">Verdana</option>
-                        <option value="">Times New Roman</option>
+<!--+++++++++++++++++++++++++++++++++FUENTE DE TEXTO+++++++++++++++++++++++++++++++++++++++-->
+                <div class="tiposDeFuente">
+                    <h3 class="tituloTexto">FUENTE</h3>
+                    <select for="Seleccionar fuente" id="seleccionDeFuente">
+                        <option value="Arial">Arial</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="American Typewriter">American Typewriter</option>
+                        <option value="Andale Mono">Andale Mono</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Helvética">Helvética</option>
+                        <option value="Impact">Impact</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Times New Roman">Times New Roman</option>
                     </select>
 
-                    <div class="tamañoDeFuente">
-                        <input type="number" name="Tamaño de fuente">
+                    <div class="contenedorDeFuente">
+                        <input type="number" for="Tamaño de fuente" class="tamanioDeFuente" id="tamanioDeFuente"
+                            min="12" value="40">
 
                         <div class="alineacionDeTexto">
-                            <button><i class="fa-solid fa-align-left"></i></button>
-                            <button><i class="fa-solid fa-align-justify"></i></button>
-                            <button><i class="fa-solid fa-align-right"></i></button>
+                            <button class="botonAlinearIzquierda" id="botonAlinearIzquierda"
+                                aria-label="Alinear el texto hacia la izquierda"><i class="fa-solid fa-align-left"
+                                    aria-hidden="true"></i></button>
+                            <button class="botonCentrar" id="botonCentrar" aria-label="Centrar el texto"><i
+                                    class="fa-solid fa-align-justify" aria-hidden="true"></i></button>
+                            <button class="botonAlinaerDerecha" id="botonAlinaerDerecha"
+                                aria-label="Alinear texto hacia la derecha"><i class="fa-solid fa-align-right"
+                                    aria-hidden="true"></i></button>
 
                         </div>
 
                     </div>
 
                 </div>
-            </div>   
 
-        </div>
+             <!--+++++++++++++++++++++++COLOR Y FONDO DE TEXTO++++++++++++++++++++++++-->
 
-        <div>
+                <div class="contenedorDeColorYFondoTexto">
+                    <div class="colorYFondo">
+                        <div class="colorDeTexto">
+                            <h3 class="tituloTexto">COLOR</h3>
+                            <div class="inputColorDeTexto">
+                                <input for="color" type="color" id="color" class="color" value="#000000"
+                                    aria-label="Color de texto">
+                                <span>#000000</span>
+                            </div>
+                        </div>
 
-        </div>
+                        <div class="fondoDeTexto">
+                            <h3 class="tituloTexto">FONDO</h3>
+                            <div class="inputFondoDeTexto">
+                                <input for="fondo" type="color" id="fondo" class="fondo" value="#FFFFFF"
+                                    aria-label="Color de fondo de texto">
+                                <span>#FFFFFF</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checkboxFondoTransparente">
+                        <input for="checkbox de fondo transparente" type="checkbox" id="checkTransparente"
+                            class="checkTransparente">
+                        <label>Fondo transparente</label>
+                    </div>
+
+                </div>
+
+             <!--+++++++++++++++++++++++++++++++CONTORNO DE TEXTO+++++++++++++++++++++++++++++++++-->
+
+                <div class="contenedorDeContorno">
+                    <h3 class="tituloTexto">CONTORNO</h3>
+                    <div class="contenedorBotonesDeContorno">
+                        <button class="botonContorno" id="btnNoContorno">Ninguno</button>
+                        <button class="botonContorno" id="btnContornoClaro">Claro</button>
+                        <button class="botonContorno" id="btnContornoOscuro">Oscuro</button>
+                    </div>
+                </div>
+
+                <!--+++++++++++++++++++++++++++++++ESPACIADO DE TEXTO+++++++++++++++++++++++++++++++++++++-->
+
+                <div class="espaciado">
+                    <h3 class="tituloTexto">ESPACIADO</h3>
+                    <input for="espaciado" type="number" id="espaciadoDeTexto" class="espaciadoDeTexto" min="10"
+                        max="50" aria-label="Espaciado" value="35">
+
+                </div>
+                <!--++++++++++++++++++++++++++++++INTERLINEADO DE TEXTO+++++++++++++++++++++++++++++++++-->
+                <div class="interlineado">
+                    <h3 class="tituloTexto">INTERLINEADO</h3>
+                    <select id="interlineado" class="interlineado" aria-label="Interlineado">
+                        <option value="o.8">0.8</option>
+                        <option value="1">1</option>
+                        <option value="1.2">1.2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="2">2</option>
+                        <option value="2.5">2.5</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div>
+
+            </div>
+        </section>
+
+<!---+++++++++++++++++++++++++SECCION CONFIGURACION DE IMAGEN+++++++++++++++++++++++++-->
+
+        <section class="seccion de imagen">
+
+            <h2 class="tituloImagen">IMAGEN</h2>
+
+<!--+++++++++++++++++++++++++++++++++++URL DE IMAGEN++++++++++++++++++++++++++++++++++-->
+
+            <div class="direccionDeUrl">
+               <h3 class="tituloImagen">URL</h3>
+                <input for="url" type="text" id="urlDeImagen" class="urlDeImagen">
+            </div>
+
+        <!--++++++++++++++++++++++++FONDO DE IMAGEN++++++++++++++++++++++++++++++-->
+            <div class="fondoDeImagen">
+                
+                <h3 class="tituloImagen">FONDO</h3>
+
+                <div class="contenedorFondoDeImagen">
+                    <div class="inputFondoImagen">
+                        <input for="color de fondo imagen" type="color" id="colorFondoImagen" class="colorFondoImagen" aria-label="Color de fondo de imagen" value="#FFFFFF">
+                        <span >#FFFFFF</span>
+                    </div>
+
+                    <div class="selectorDeFondo">
+                        <select>
+                            <option value="">Ninguno</option>
+                            <option value="">Aclarar</option>
+                            <option value="">Oscurecer</option>
+                            <option value="">Diferencia</option>
+                            <option value="">Luminosidad</option>
+                            <option value="">Multiplicar</option>
+                        </select>
+
+                    </div>
+                </div>
+
+            </div>
+
+<!--++++++++++++++++++++++++++++FILTROS DE IMAGEN++++++++++++++++++++++++++++++++-->
+
+            <div class="contenedorDeFiltros">
+
+                <h3 class="tituloImagen">FILTROS</h3>
+
+                <div class="opcionDeFiltro">
+                    <label>BRILLO</label>
+                    <input id="brightness" type="range" min="0" max="1" step="0.1" value="1">
+                </div>
+                
+                <div class="opcionDeFiltro">
+                    <label>OPACIDAD</label>
+                    <input id="opacity" type="range" min="0" max="1" step="0.1" value="1">
+                </div>
+
+                <div class="opcionDeFiltro">
+                    <label>CONTRASTE</label>
+                    <input id="contrast" type="range" min="100" max="1000" step="1" value="100">
+                </div>
+
+                <div class="opcionDeFiltro">
+                    <label>DESENFOQUE</label>
+                    <input id="blur" type="range" min="0" max="10" step="0.1" value="0">
+                </div>
+
+                <div class="opcionDeFiltro">
+                    <label>ESCALA DE GRISES</label>
+                    <input id="grayscale" type="range" min="0" max="100" step="1" value="0">
+                </div>
+
+                <div class="opcionDeFiltro">
+                    <label>SEPIA</label>
+                    <input id="sepia" type="range" min="0" max="100" step="1" value="0">
+                </div>
+
+                <div class="opcionDeFiltro">
+                    <label>SATURADO</label>
+                    <input id="saturation" type="range" min="100" max="1000" step="10" value="100">
+                </div>
+
+                <div class="opcionDeFiltro">
+                    <label>HUE</label>
+                    <input id="hue-rotation" type="range" min="0" max="359" step="1" value="0">
+                </div>
+
+                <div class="opcionDeFiltro">
+                    <label>NEGATIVO</label>
+                    <input id="invert" type="range" min="0" max="1" step="0.1" value="0">
+                </div>
+
+            </div>
+<!--+++++++++++++++++++++++++++BOTON DE REESTABLECER FILTROS++++++++++++++++++++++++++++++-->
+            <button class="botonReestablecer" id="botonReestablecer">Reestablecer filtros</button>
+        
+
+        </section>
     </aside>
 
-        <div class="direccionDeUrl">
-            <label for="">URL</label><br>
-            <input type="text">
-          </div>
+   
 
-          <div class="fondo">
-           <label for="fondo">FONDO</label><br>
-           <input >
-           <input>
-          </div>
-
-    
- <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

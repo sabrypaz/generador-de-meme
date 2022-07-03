@@ -4,7 +4,7 @@
     position: relative;
 }
 
-/*+++++++++++++SECCION NAVEGADOR++++++++++++*/
+/*+++++++++++++SECCION HEADER++++++++++++*/
 
 .navegacion{
     width: 100%;
@@ -80,6 +80,9 @@
 
 /*+++++++++SECCION ASIDE DE TEXTO+++++++*/
 
+.seccionDeTexto{
+    display:none;
+}
 .columnaDeTexto{
     position:absolute;
     right: 0px;
@@ -95,13 +98,24 @@
    
 }
 
-.tamañoDeFuente{
+.contenedorDeFuente{
     display:flex;
 }
 
+.colorYFondo{
+    display:flex;
+}
 
+/*++++++++++++++++++SECCION DE IMAGEN++++++++++++++++++++*/
 
+.contenedorFondoDeImagen{
+    display: flex;
+}
 
+.opcionDeFiltro{
+    display: flex;
+    flex-direction: column;
+}
 
 
 
