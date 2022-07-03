@@ -55,19 +55,19 @@
 
     <aside class="columnaDeTexto" id="columnaDeTexto">
 
-        <button><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        <button class="botonCerrar" id="botonCerrar" aria-label="botón de cerrar"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
 
       <!--++++++++++++++++++++++++SECCION CONFIGURACION DE TEXTO++++++++++++++++++++++++--> 
 
         <section class="seccionDeTexto">
 
-            <h2 class="tituloTexto">TEXTO</h2>
+            <h2 class="tituloTexto1">TEXTO</h2>
 
             <div class="opcionesDeColumnaDeTexto">
 
                 <div class="topText">
-                    <h3 class="tituloTexto">SUPERIOR</h3>
-                    <textarea>TOP TEXT</textarea>
+                    <h3 class="tituloTexto2">SUPERIOR</h3>
+                    <textarea class="inputTopText" id="inputTopText">TOP TEXT</textarea>
                 </div>
 
                 <div class="checkboxSuperior">
@@ -76,8 +76,8 @@
                 </div>
 
                 <div class="bottomText">
-                    <h3 class="tituloTexto">INFERIOR</h3>
-                    <textarea>BOTTOM TEXT</textarea>
+                    <h3 class="tituloTexto2">INFERIOR</h3>
+                    <textarea class="inputTextoInferior" id="inputTextoInferior">BOTTOM TEXT</textarea>
 
                     <div class="checkboxInferior">
                         <input type="checkbox">
@@ -86,8 +86,10 @@
                 </div>
 <!--+++++++++++++++++++++++++++++++++FUENTE DE TEXTO+++++++++++++++++++++++++++++++++++++++-->
                 <div class="tiposDeFuente">
-                    <h3 class="tituloTexto">FUENTE</h3>
-                    <select for="Seleccionar fuente" id="seleccionDeFuente">
+                    <h3 class="tituloTexto2">FUENTE</h3>
+
+                    <select class="menuSelectorDeFuente" for="Seleccionar fuente" id="seleccionDeFuente" aria-label="Menu de seleccion de fuente">
+
                         <option value="Arial">Arial</option>
                         <option value="Arial Black">Arial Black</option>
                         <option value="American Typewriter">American Typewriter</option>
@@ -97,6 +99,7 @@
                         <option value="Impact">Impact</option>
                         <option value="Verdana">Verdana</option>
                         <option value="Times New Roman">Times New Roman</option>
+
                     </select>
 
                     <div class="contenedorDeFuente">
@@ -124,7 +127,7 @@
                 <div class="contenedorDeColorYFondoTexto">
                     <div class="colorYFondo">
                         <div class="colorDeTexto">
-                            <h3 class="tituloTexto">COLOR</h3>
+                            <h3 class="tituloTexto2">COLOR</h3>
                             <div class="inputColorDeTexto">
                                 <input for="color" type="color" id="color" class="color" value="#000000"
                                     aria-label="Color de texto">
@@ -133,7 +136,7 @@
                         </div>
 
                         <div class="fondoDeTexto">
-                            <h3 class="tituloTexto">FONDO</h3>
+                            <h3 class="tituloTexto2">FONDO</h3>
                             <div class="inputFondoDeTexto">
                                 <input for="fondo" type="color" id="fondo" class="fondo" value="#FFFFFF"
                                     aria-label="Color de fondo de texto">
@@ -145,7 +148,7 @@
                     <div class="checkboxFondoTransparente">
                         <input for="checkbox de fondo transparente" type="checkbox" id="checkTransparente"
                             class="checkTransparente">
-                        <label>Fondo transparente</label>
+                        <label for="fondo transparente" aria-label="seleccionar fondo transparente">Fondo transparente</label>
                     </div>
 
                 </div>
@@ -153,7 +156,7 @@
              <!--+++++++++++++++++++++++++++++++CONTORNO DE TEXTO+++++++++++++++++++++++++++++++++-->
 
                 <div class="contenedorDeContorno">
-                    <h3 class="tituloTexto">CONTORNO</h3>
+                    <h3 class="tituloTexto2">CONTORNO</h3>
                     <div class="contenedorBotonesDeContorno">
                         <button class="botonContorno" id="btnNoContorno">Ninguno</button>
                         <button class="botonContorno" id="btnContornoClaro">Claro</button>
@@ -164,15 +167,15 @@
                 <!--+++++++++++++++++++++++++++++++ESPACIADO DE TEXTO+++++++++++++++++++++++++++++++++++++-->
 
                 <div class="espaciado">
-                    <h3 class="tituloTexto">ESPACIADO</h3>
+                    <h3 class="tituloTexto2">ESPACIADO</h3>
                     <input for="espaciado" type="number" id="espaciadoDeTexto" class="espaciadoDeTexto" min="10"
                         max="50" aria-label="Espaciado" value="35">
 
                 </div>
                 <!--++++++++++++++++++++++++++++++INTERLINEADO DE TEXTO+++++++++++++++++++++++++++++++++-->
                 <div class="interlineado">
-                    <h3 class="tituloTexto">INTERLINEADO</h3>
-                    <select id="interlineado" class="interlineado" aria-label="Interlineado">
+                    <h3 class="tituloTexto2">INTERLINEADO</h3>
+                    <select id="interlineado" class="selectorInterlineado" aria-label="Interlineado">
                         <option value="o.8">0.8</option>
                         <option value="1">1</option>
                         <option value="1.2">1.2</option>
@@ -191,36 +194,36 @@
 
 <!---+++++++++++++++++++++++++SECCION CONFIGURACION DE IMAGEN+++++++++++++++++++++++++-->
 
-        <section class="seccion de imagen">
+        <section class="seccionDeImagen">
 
-            <h2 class="tituloImagen">IMAGEN</h2>
+            <h2 class="tituloImagen1">IMAGEN</h2>
 
 <!--+++++++++++++++++++++++++++++++++++URL DE IMAGEN++++++++++++++++++++++++++++++++++-->
 
             <div class="direccionDeUrl">
-               <h3 class="tituloImagen">URL</h3>
+               <h3 class="tituloImagen2">URL</h3>
                 <input for="url" type="text" id="urlDeImagen" class="urlDeImagen">
             </div>
 
         <!--++++++++++++++++++++++++FONDO DE IMAGEN++++++++++++++++++++++++++++++-->
             <div class="fondoDeImagen">
                 
-                <h3 class="tituloImagen">FONDO</h3>
+                <h3 class="tituloImagen2">FONDO</h3>
 
                 <div class="contenedorFondoDeImagen">
                     <div class="inputFondoImagen">
                         <input for="color de fondo imagen" type="color" id="colorFondoImagen" class="colorFondoImagen" aria-label="Color de fondo de imagen" value="#FFFFFF">
-                        <span >#FFFFFF</span>
+                        <span id="colorDeFondo" aria-hidden="true">#FFFFFF</span>
                     </div>
 
                     <div class="selectorDeFondo">
-                        <select>
-                            <option value="">Ninguno</option>
-                            <option value="">Aclarar</option>
-                            <option value="">Oscurecer</option>
-                            <option value="">Diferencia</option>
-                            <option value="">Luminosidad</option>
-                            <option value="">Multiplicar</option>
+                        <select class="menuSelector" aria-label="menú de selector de fondo" id="menuSelector">
+                            <option value="ninguno">Ninguno</option>
+                            <option value="aclarar">Aclarar</option>
+                            <option value="oscurecer">Oscurecer</option>
+                            <option value="diferencia">Diferencia</option>
+                            <option value="luminosidad">Luminosidad</option>
+                            <option value="multiplicar">Multiplicar</option>
                         </select>
 
                     </div>
@@ -232,50 +235,50 @@
 
             <div class="contenedorDeFiltros">
 
-                <h3 class="tituloImagen">FILTROS</h3>
+                <h3 class="tituloImagen2">FILTROS</h3>
 
                 <div class="opcionDeFiltro">
-                    <label>BRILLO</label>
+                    <label for="brillo" class="filtro">BRILLO</label>
                     <input id="brightness" type="range" min="0" max="1" step="0.1" value="1">
                 </div>
                 
                 <div class="opcionDeFiltro">
-                    <label>OPACIDAD</label>
+                    <label for="oacidad" class="filtro">OPACIDAD</label>
                     <input id="opacity" type="range" min="0" max="1" step="0.1" value="1">
                 </div>
 
                 <div class="opcionDeFiltro">
-                    <label>CONTRASTE</label>
+                    <label for="contraste" class="filtro">CONTRASTE</label>
                     <input id="contrast" type="range" min="100" max="1000" step="1" value="100">
                 </div>
 
                 <div class="opcionDeFiltro">
-                    <label>DESENFOQUE</label>
+                    <label for="desenfoque" class="filtro">DESENFOQUE</label>
                     <input id="blur" type="range" min="0" max="10" step="0.1" value="0">
                 </div>
 
                 <div class="opcionDeFiltro">
-                    <label>ESCALA DE GRISES</label>
+                    <label for="escala de grises" class="filtro">ESCALA DE GRISES</label>
                     <input id="grayscale" type="range" min="0" max="100" step="1" value="0">
                 </div>
 
                 <div class="opcionDeFiltro">
-                    <label>SEPIA</label>
+                    <label for="sepia" class="filtro">SEPIA</label>
                     <input id="sepia" type="range" min="0" max="100" step="1" value="0">
                 </div>
 
                 <div class="opcionDeFiltro">
-                    <label>SATURADO</label>
+                    <label for="saturacion" class="filtro">SATURACION</label>
                     <input id="saturation" type="range" min="100" max="1000" step="10" value="100">
                 </div>
 
                 <div class="opcionDeFiltro">
-                    <label>HUE</label>
+                    <label for="hue" class="filtro">HUE</label>
                     <input id="hue-rotation" type="range" min="0" max="359" step="1" value="0">
                 </div>
 
                 <div class="opcionDeFiltro">
-                    <label>NEGATIVO</label>
+                    <label for="negativo" class="filtro">NEGATIVO</label>
                     <input id="invert" type="range" min="0" max="1" step="0.1" value="0">
                 </div>
 

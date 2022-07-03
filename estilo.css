@@ -33,12 +33,12 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.btnNav:hover{
+.btnNav:hover , .btnNav:focus{
     background: rgb(97, 162, 243);
     border-radius: 3px;
 }
 
-/*+++++++++SECCION CONTENEDOR DE IMAGEN++++++++*/
+/*+++++++++SECCION CENTRAL DE MEME++++++++*/
 
 .contenedorCentral{
     width: 100%;
@@ -77,46 +77,172 @@
     border-radius:3px;
     border:none;
 }
-
+.botonCerrar{
+    padding: 5px;
+}
 /*+++++++++SECCION ASIDE DE TEXTO+++++++*/
 
-.seccionDeTexto{
+.seccionDeImagen{
     display:none;
 }
+
+.seccionDeTexto{
+    padding: 10px;
+}
+
 .columnaDeTexto{
     position:absolute;
     right: 0px;
     top: 0px;
-    width:250px;
+    width:270px;
     height: 100%;
-    background:rgb(50, 50, 220);
+    background:rgb(20, 20, 100);
     color:white;
-    padding: 5px;
+
 }
 
-.fondo{
-   
+.opcionesDeColumnaDeTexto{
+    margin-top: 15px;
+}
+
+.inputTopText , .inputTextoInferior{
+    background: black;
+    border:none;
+    border-radius:3px;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:5px;
+    width: 95%;
+}
+
+.checkboxSuperior{
+    margin:5px 0px;
+}
+
+.menuSelectorDeFuente , .espaciadoDeTexto , .selectorInterlineado{
+    background: black;
+    border-radius:3px;
+    border:none;
+    padding: 7px;
+    color:white;
+    width: 95%;
+    margin-bottom: 5px;
 }
 
 .contenedorDeFuente{
     display:flex;
 }
+.tamanioDeFuente{
+    font-size:small;
+    color:white;
+    background: black;
+    border:none;
+    padding: 7px;
+    border-radius: 3px;
+
+}
+
+.botonAlinearIzquierda , .botonCentrar , .botonAlinaerDerecha , .botonContorno{
+    padding: 5px;
+    color: white;
+    background: black;
+    border:none;
+    font-size: medium;
+    border-radius: 3px;
+}
 
 .colorYFondo{
     display:flex;
+    margin-top: 15px;
 }
 
-/*++++++++++++++++++SECCION DE IMAGEN++++++++++++++++++++*/
+.checkboxFondoTransparente{
+    margin:10px 0px;
+}
+
+.contenedorDeContorno , .espaciado , .interlineado{
+    margin: 15px 0px;
+}
+
+/*++++++++++++++++++SECCION CONFIGURACION DE IMAGEN++++++++++++++++++++*/
+
+.seccionDeImagen{
+    padding:10px;
+}
+
+.tituloImagen1 , .tituloTexto1{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:larger;
+    text-align: center;
+}
+
+.tituloImagen2 , .tituloTexto2{
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size:small;
+    margin: 3px;
+    margin-bottom: 10px;
+}
+
+.direccionDeUrl{
+    padding: 5px;
+}
+.urlDeImagen{
+    padding: 7px;
+    width:95%;
+    border-radius: 3px ;
+    border:none;
+    color:white;
+    background-color: black;
+    
+}
+
 
 .contenedorFondoDeImagen{
     display: flex;
+    text-align: center;
+    
 }
 
+.inputFondoImagen , .inputColorDeTexto , .inputFondoDeTexto{
+    border:none;
+    background-color: black;
+    border-radius: 3px;
+    padding: 5px 2px;
+}
+
+.menuSelector{
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+    border:none;
+    margin-left:10px;
+}
+
+.contenedorDeFiltros{
+    padding: 5px;
+}
+
+.filtro{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
 .opcionDeFiltro{
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 
+.botonReestablecer{
+    background-color: black;
+    border-radius: 3px;
+    color: white;
+    border:none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:medium;
+    padding: 5px;
+    margin-top: 10px;
+}
 
 
 
