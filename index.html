@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="imagenes/favicon.png">   
     <link rel="stylesheet" href="estilo.css">
     <title>Generador de Memes</title>
 </head>
@@ -15,9 +16,9 @@
 <body>
    <!--++++++++++++++++++++++++++++++++SECCION HEADER+++++++++++++++++++++++++++++++++++-->
 
-    <header class="navegacion">
+    <header class="navegacion" id="navegacion">
         <h1 class="tituloProject">Generador de Memes</h1>
-        <div class="contenedorDeBotones">
+        <div class="contenedorDeBotones" id="contenedorDeBotones">
             <button class="btnNav" id="botonImagen"><i class="fa-solid fa-file-image"
                     aria-hidden="true"></i>Imagen</button>
             <button class="btnNav" id="botonTexto"><i class="fa-solid fa-font" aria-hidden="true"></i>Texto</button>
@@ -30,16 +31,16 @@
 
         <div class="contenedorMeme">
 
-            <div class="contenedorTopText" id="contenedorTopText">
-                <p>TOP TEXT</p>
+            <div class="contenedorTopText" >
+                <p id="contenedorTopText">TOP TEXT</p>
             </div>
 
-            <div class="contenedorImagen" id="contenedorImagen" aria-label="imagen">
-
+            <div class="contenedorImagen" id="contenedorImagen" aria-label="imagen de meme">
+                <img>
             </div>
 
-            <div class="contenedorBottomText" id="contenedorBottomText">
-                <p>BOTTOM TEXT</p>
+            <div class="contenedorBottomText">
+                <p id="contenedorBottomText">BOTTOM TEXT</p>
             </div>
 
         </div>
@@ -59,7 +60,7 @@
 
       <!--++++++++++++++++++++++++SECCION CONFIGURACION DE TEXTO++++++++++++++++++++++++--> 
 
-        <section class="seccionDeTexto">
+        <section class="seccionDeTexto" id="seccionDeTexto">
 
             <h2 class="tituloTexto1">TEXTO</h2>
 
@@ -194,7 +195,7 @@
 
 <!---+++++++++++++++++++++++++SECCION CONFIGURACION DE IMAGEN+++++++++++++++++++++++++-->
 
-        <section class="seccionDeImagen">
+        <section class="seccionDeImagen" id="seccionDeImagen">
 
             <h2 class="tituloImagen1">IMAGEN</h2>
 
@@ -284,7 +285,7 @@
 
             </div>
 <!--+++++++++++++++++++++++++++BOTON DE REESTABLECER FILTROS++++++++++++++++++++++++++++++-->
-            <button class="botonReestablecer" id="botonReestablecer">Reestablecer filtros</button>
+            <button type="button" class="botonReestablecer" id="botonReestablecer">Reestablecer filtros</button>
         
 
         </section>

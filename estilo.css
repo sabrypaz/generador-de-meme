@@ -13,6 +13,12 @@
    
 }
 
+.modoClaro{
+    background-color: lightblue;
+    color:black;
+    
+}
+
 .tituloProject{
     color: white;
     font-size: 2.5em;
@@ -31,6 +37,7 @@
     color:white;
     border:none; 
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 3px;
 }
 
 .btnNav:hover , .btnNav:focus{
