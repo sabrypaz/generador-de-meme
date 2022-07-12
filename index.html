@@ -5,62 +5,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto+Condensed:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="imagenes/favicon.png">   
+    <link rel="shortcut icon" href="imagenes/favicon.png">
     <link rel="stylesheet" href="estilo.css">
+
     <title>Generador de Memes</title>
 </head>
 
 <body>
-   <!--++++++++++++++++++++++++++++++++SECCION HEADER+++++++++++++++++++++++++++++++++++-->
+    <!--++++++++++++++++++++++++++++++++SECCION HEADER+++++++++++++++++++++++++++++++++++-->
 
     <header class="navegacion" id="navegacion">
         <h1 class="tituloProject">Generador de Memes</h1>
         <div class="contenedorDeBotones" id="contenedorDeBotones">
-            <button class="btnNav" id="botonImagen"><i class="fa-solid fa-file-image"
+            <button class="btnNav" id="botonImagen" onclick="mostrarPanelImagen();"><i class="fa-solid fa-file-image"
                     aria-hidden="true"></i>Imagen</button>
-            <button class="btnNav" id="botonTexto"><i class="fa-solid fa-font" aria-hidden="true"></i>Texto</button>
+            <button class="btnNav" id="botonTexto" onclick="mostrarPanelTexto();"><i class="fa-solid fa-font" aria-hidden="true"></i>Texto</button>
             <button class="btnNav" id="botonModo" aria-label="Cambiar pagina a modo oscuro"><i
                     class="fa-solid fa-lightbulb"></i>Modo Oscuro</button>
         </div>
     </header>
- <!--+++++++++++++++++++++++++++++++++SECCION CENTRAL DE MEME+++++++++++++++++++++++++++++++++-->
-    <main class="contenedorCentral">
+    <!--+++++++++++++++++++++++++++++++++SECCION CENTRAL DE MEME+++++++++++++++++++++++++++++++++-->
 
-        <div class="contenedorMeme">
 
-            <div class="contenedorTopText" >
-                <p id="contenedorTopText">TOP TEXT</p>
+    <div class="central" id="central">
+
+        <main class="container" id="container">
+
+            <div class="contenedorMeme" id="canvas-meme">
+                
+                <div class="contenedorImagen" id="contenedorImagen" aria-label="imagen de meme">
+
+                    <div class="contenedorTopText" id="contenedorTop">
+                        <p id="contenedorTopText">TOP TEXT</p>
+                    </div>
+
+                    <div class="contenedorBottomText" id="contenedorBottom">
+                        <p id="contenedorBottomText">BOTTOM TEXT</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="contenedorImagen" id="contenedorImagen" aria-label="imagen de meme">
-                <img>
+            <div class="contenedorBtnDeDescarga">
+                <button type="button" class="btnDeDescarga" id="btnDeDescarga"><i class="fa-solid fa-download"
+                        aria-hidden="true"></i>Descargar Meme</button>
             </div>
 
-            <div class="contenedorBottomText">
-                <p id="contenedorBottomText">BOTTOM TEXT</p>
-            </div>
 
-        </div>
 
-        <div class="contenedorBtnDeDescarga">
-            <button type="button" class="btnDeDescarga" id="btnDeDescarga"><i class="fa-solid fa-download"
-                    aria-hidden="true"></i>Descargar Meme</button>
-        </div>
+        </main>
+    </div>
 
-    </main>
+    <!--+++++++++++++++++++++++++++++++++SECCION ASIDE DE TEXTO++++++++++++++++++++++++++++++++++-->
 
- <!--+++++++++++++++++++++++++++++++++SECCION ASIDE++++++++++++++++++++++++++++++++++-->
+    <aside class="columnaDeTexto" id="columnaDeTexto" >
 
-    <aside class="columnaDeTexto" id="columnaDeTexto">
 
-        <button class="botonCerrar" id="botonCerrar" aria-label="botón de cerrar"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
-
-      <!--++++++++++++++++++++++++SECCION CONFIGURACION DE TEXTO++++++++++++++++++++++++--> 
+        <!--++++++++++++++++++++++++SECCION CONFIGURACION DE TEXTO++++++++++++++++++++++++-->
 
         <section class="seccionDeTexto" id="seccionDeTexto">
+
+            <button type="button" class="botonCerrar" id="botonCerrar" aria-label="botón de cerrar"><i
+                    class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+
 
             <h2 class="tituloTexto1">TEXTO</h2>
 
@@ -72,7 +91,7 @@
                 </div>
 
                 <div class="checkboxSuperior">
-                    <input type="checkbox">
+                    <input type="checkbox" id="sinTextoSuperior">
                     <label for="sinTextoSuperior">Sin texto superior</label>
                 </div>
 
@@ -81,21 +100,22 @@
                     <textarea class="inputTextoInferior" id="inputTextoInferior">BOTTOM TEXT</textarea>
 
                     <div class="checkboxInferior">
-                        <input type="checkbox">
+                        <input type="checkbox" id="sinTextoInferior">
                         <label for="sinTextoInferior">Sin texto inferior</label>
                     </div>
                 </div>
-<!--+++++++++++++++++++++++++++++++++FUENTE DE TEXTO+++++++++++++++++++++++++++++++++++++++-->
+                <!--+++++++++++++++++++++++++++++++++FUENTE DE TEXTO+++++++++++++++++++++++++++++++++++++++-->
                 <div class="tiposDeFuente">
                     <h3 class="tituloTexto2">FUENTE</h3>
 
-                    <select class="menuSelectorDeFuente" for="Seleccionar fuente" id="seleccionDeFuente" aria-label="Menu de seleccion de fuente">
+                    <select class="menuSelectorDeFuente" for="Seleccionar fuente" id="seleccionDeFuente"
+                        aria-label="Menu de seleccion de fuente">
 
                         <option value="Arial">Arial</option>
-                        <option value="Arial Black">Arial Black</option>
+                        <option value="Montserrat">Montserrat</option>
                         <option value="American Typewriter">American Typewriter</option>
                         <option value="Andale Mono">Andale Mono</option>
-                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Roboto Condensed">Roboto Condensed</option>
                         <option value="Helvética">Helvética</option>
                         <option value="Impact">Impact</option>
                         <option value="Verdana">Verdana</option>
@@ -113,7 +133,7 @@
                                     aria-hidden="true"></i></button>
                             <button class="botonCentrar" id="botonCentrar" aria-label="Centrar el texto"><i
                                     class="fa-solid fa-align-justify" aria-hidden="true"></i></button>
-                            <button class="botonAlinaerDerecha" id="botonAlinaerDerecha"
+                            <button class="botonAlinearDerecha" id="botonAlinearDerecha"
                                 aria-label="Alinear texto hacia la derecha"><i class="fa-solid fa-align-right"
                                     aria-hidden="true"></i></button>
 
@@ -123,7 +143,7 @@
 
                 </div>
 
-             <!--+++++++++++++++++++++++COLOR Y FONDO DE TEXTO++++++++++++++++++++++++-->
+                <!--+++++++++++++++++++++++COLOR Y FONDO DE TEXTO++++++++++++++++++++++++-->
 
                 <div class="contenedorDeColorYFondoTexto">
                     <div class="colorYFondo">
@@ -149,19 +169,20 @@
                     <div class="checkboxFondoTransparente">
                         <input for="checkbox de fondo transparente" type="checkbox" id="checkTransparente"
                             class="checkTransparente">
-                        <label for="fondo transparente" aria-label="seleccionar fondo transparente">Fondo transparente</label>
+                        <label for="fondo transparente" aria-label="seleccionar fondo transparente">Fondo
+                            transparente</label>
                     </div>
 
                 </div>
 
-             <!--+++++++++++++++++++++++++++++++CONTORNO DE TEXTO+++++++++++++++++++++++++++++++++-->
+                <!--+++++++++++++++++++++++++++++++CONTORNO DE TEXTO+++++++++++++++++++++++++++++++++-->
 
                 <div class="contenedorDeContorno">
                     <h3 class="tituloTexto2">CONTORNO</h3>
                     <div class="contenedorBotonesDeContorno">
-                        <button class="botonContorno" id="btnNoContorno">Ninguno</button>
-                        <button class="botonContorno" id="btnContornoClaro">Claro</button>
-                        <button class="botonContorno" id="btnContornoOscuro">Oscuro</button>
+                        <button type="button" class="botonContorno" id="btnNoContorno">Ninguno</button>
+                        <button type="button" class="botonContorno" id="btnContornoClaro">Claro</button>
+                        <button type="button" class="botonContorno" id="btnContornoOscuro">Oscuro</button>
                     </div>
                 </div>
 
@@ -188,32 +209,39 @@
 
             </div>
 
-            <div>
 
-            </div>
+
         </section>
 
-<!---+++++++++++++++++++++++++SECCION CONFIGURACION DE IMAGEN+++++++++++++++++++++++++-->
+    </aside>
+
+    <!---+++++++++++++++++++++++++SECCION ASIDE DE IMAGEN+++++++++++++++++++++++++-->
+
+    <aside class="columnaDeImagen" id="columnaDeImagen">
 
         <section class="seccionDeImagen" id="seccionDeImagen">
+            <button type="button" class="botonCerrar" id="botonCerrar2" aria-label="botón de cerrar"><i
+                    class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+
 
             <h2 class="tituloImagen1">IMAGEN</h2>
 
-<!--+++++++++++++++++++++++++++++++++++URL DE IMAGEN++++++++++++++++++++++++++++++++++-->
+            <!--+++++++++++++++++++++++++++++++++++URL DE IMAGEN++++++++++++++++++++++++++++++++++-->
 
             <div class="direccionDeUrl">
-               <h3 class="tituloImagen2">URL</h3>
-                <input for="url" type="text" id="urlDeImagen" class="urlDeImagen">
+                <h3 class="tituloImagen2">URL</h3>
+                <input for="url" type="text" id="urlDeImagen" class="urlDeImagen" aria-label="Url de imagen">
             </div>
 
-        <!--++++++++++++++++++++++++FONDO DE IMAGEN++++++++++++++++++++++++++++++-->
+            <!--++++++++++++++++++++++++FONDO DE IMAGEN++++++++++++++++++++++++++++++-->
             <div class="fondoDeImagen">
-                
+
                 <h3 class="tituloImagen2">FONDO</h3>
 
                 <div class="contenedorFondoDeImagen">
                     <div class="inputFondoImagen">
-                        <input for="color de fondo imagen" type="color" id="colorFondoImagen" class="colorFondoImagen" aria-label="Color de fondo de imagen" value="#FFFFFF">
+                        <input for="color de fondo imagen" type="color" id="colorFondoImagen" class="colorFondoImagen"
+                            aria-label="Color de fondo de imagen" value="#FFFFFF">
                         <span id="colorDeFondo" aria-hidden="true">#FFFFFF</span>
                     </div>
 
@@ -232,7 +260,7 @@
 
             </div>
 
-<!--++++++++++++++++++++++++++++FILTROS DE IMAGEN++++++++++++++++++++++++++++++++-->
+            <!--++++++++++++++++++++++++++++FILTROS DE IMAGEN++++++++++++++++++++++++++++++++-->
 
             <div class="contenedorDeFiltros">
 
@@ -242,9 +270,9 @@
                     <label for="brillo" class="filtro">BRILLO</label>
                     <input id="brightness" type="range" min="0" max="1" step="0.1" value="1">
                 </div>
-                
+
                 <div class="opcionDeFiltro">
-                    <label for="oacidad" class="filtro">OPACIDAD</label>
+                    <label for="opacidad" class="filtro">OPACIDAD</label>
                     <input id="opacity" type="range" min="0" max="1" step="0.1" value="1">
                 </div>
 
@@ -284,16 +312,23 @@
                 </div>
 
             </div>
-<!--+++++++++++++++++++++++++++BOTON DE REESTABLECER FILTROS++++++++++++++++++++++++++++++-->
+            <!--+++++++++++++++++++++++++++BOTON DE REESTABLECER FILTROS++++++++++++++++++++++++++++++-->
             <button type="button" class="botonReestablecer" id="botonReestablecer">Reestablecer filtros</button>
-        
+
 
         </section>
     </aside>
 
-   
+
 
     <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>

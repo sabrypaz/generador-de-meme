@@ -8,7 +8,7 @@
 
 .navegacion{
     width: 100%;
-    background-color: rgb(16, 16, 63);
+    background: rgb(16, 16, 63);
     text-align: center;
    
 }
@@ -16,7 +16,18 @@
 .modoClaro{
     background-color: lightblue;
     color:black;
-    
+}
+
+.modoClaro1{
+    background: rgb(143, 216, 240);
+}
+.modoClaro2{
+    background: rgb(206, 219, 221);
+}
+
+.inputClaro{
+    background: rgb(246, 241, 241);
+    color:black;
 }
 
 .tituloProject{
@@ -24,7 +35,7 @@
     font-size: 2.5em;
     padding-top: 15px;
     padding-bottom: 15px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:anda
 }
 
 .contenedorDeBotones{
@@ -47,15 +58,32 @@
 
 /*+++++++++SECCION CENTRAL DE MEME++++++++*/
 
-.contenedorCentral{
-    width: 100%;
-    background: rgb(26, 26, 147);
+.central{
+    width:100%;
+    background:rgb(31, 31, 179);
+
+}
+
+.container{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contenedorMeme{
-    width: 45%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 50%;
+    
+}
+
+.contenedorTopText{
+   position: static;
+   top: 0px; 
+
+}
+.contenedorBottomText{
+    position:absolute;
+    bottom:0px;
 }
 
 .contenedorTopText , .contenedorBottomText{
@@ -69,8 +97,11 @@
 
 .contenedorImagen{
     width:100%;
-    background: black;
-    height: 400px;
+    background-color: #1E1E1E;
+    height: 600px;
+    background-position: cover;
+    position:relative;
+    
 }
 .contenedorBtnDeDescarga{
     text-align: center;
@@ -87,25 +118,26 @@
 .botonCerrar{
     padding: 5px;
 }
-/*+++++++++SECCION ASIDE DE TEXTO+++++++*/
 
-.seccionDeImagen{
+
+/*+++++++++SECCION ASIDE DE TEXTO+++++++++++++++++++++++++*/
+.columnaDeTexto{
     display:none;
 }
 
-.seccionDeTexto{
-    padding: 10px;
-}
-
-.columnaDeTexto{
-    position:absolute;
+.columnaDeTexto {
+    position:fixed;
     right: 0px;
     top: 0px;
     width:270px;
-    height: 100%;
+    height: 90%;
     background:rgb(20, 20, 100);
     color:white;
-
+    
+}
+.seccionDeTexto{
+    padding: 5px;
+    height: 100%;
 }
 
 .opcionesDeColumnaDeTexto{
@@ -148,8 +180,11 @@
     border-radius: 3px;
 
 }
+.fondoTransparente{
+    background: transparent!important;
+}
 
-.botonAlinearIzquierda , .botonCentrar , .botonAlinaerDerecha , .botonContorno{
+.botonAlinearIzquierda , .botonCentrar , .botonAlinearDerecha , .botonContorno{
     padding: 5px;
     color: white;
     background: black;
@@ -171,10 +206,29 @@
     margin: 15px 0px;
 }
 
-/*++++++++++++++++++SECCION CONFIGURACION DE IMAGEN++++++++++++++++++++*/
+/*++++++++++++++++++SECCION ASIDE DE IMAGEN++++++++++++++++++++*/
+.ocultar{
+    display: none;
+}
+.columnaDeImagen{
+    display:none;
+}
 
+.columnaDeImagen{
+    position:fixed;
+    right: 0px;
+    top: 0px;
+    width:270px;
+    height: 100%;
+    background:rgb(20, 20, 100);
+    color:white;
+   
+
+   
+}
 .seccionDeImagen{
     padding:10px;
+    height: 100%;
 }
 
 .tituloImagen1 , .tituloTexto1{
@@ -251,7 +305,19 @@
     margin-top: 10px;
 }
 
+.mostrar{
+    position:absolute!important;
+    top:0px;
+    right: 0px;
+}
 
+@media screen and (min-width: 1300px){
 
+    .botonCerrar{
+        display:none;
+    }
+
+    
+}
 
 
