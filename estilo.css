@@ -35,7 +35,7 @@
     font-size: 2.5em;
     padding-top: 15px;
     padding-bottom: 15px;
-    font-family:anda
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .contenedorDeBotones{
@@ -44,11 +44,12 @@
 
 .btnNav{
     padding: 10px;
-    background: rgb(16, 16, 63);
+    background: rgb(35, 134, 227);
     color:white;
     border:none; 
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-radius: 3px;
+    font-size: 13px;
 }
 
 .btnNav:hover , .btnNav:focus{
@@ -60,12 +61,15 @@
 
 .central{
     width:100%;
+    height: 100%;
     background:rgb(31, 31, 179);
 
 }
 
+
 .container{
     width:100%;
+    height: 100%;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -73,12 +77,24 @@
 
 .contenedorMeme{
     width: 50%;
+    position: relative;
+    
+}
+
+
+#prueba{
+    width:100%;
+    background-color: #1E1E1E; 
+    height: 700px;
+    background-position:cover;
+    background-repeat: no-repeat;
+    background-size: cover;
     
 }
 
 .contenedorTopText{
-   position: static;
-   top: 0px; 
+   position:sticky;
+   top:0px; 
 
 }
 .contenedorBottomText{
@@ -95,14 +111,6 @@
     padding:15px 0px 15px;
 }
 
-.contenedorImagen{
-    width:100%;
-    background-color: #1E1E1E;
-    height: 600px;
-    background-position: cover;
-    position:relative;
-    
-}
 .contenedorBtnDeDescarga{
     text-align: center;
 
@@ -130,7 +138,7 @@
     right: 0px;
     top: 0px;
     width:270px;
-    height: 90%;
+    height: 100%;
     background:rgb(20, 20, 100);
     color:white;
     
@@ -138,6 +146,7 @@
 .seccionDeTexto{
     padding: 5px;
     height: 100%;
+    
 }
 
 .opcionesDeColumnaDeTexto{
@@ -145,7 +154,7 @@
 }
 
 .inputTopText , .inputTextoInferior{
-    background: black;
+    background: rgb(35, 134, 227);
     border:none;
     border-radius:3px;
     color:white;
@@ -159,7 +168,7 @@
 }
 
 .menuSelectorDeFuente , .espaciadoDeTexto , .selectorInterlineado{
-    background: black;
+    background: rgb(35, 134, 227);
     border-radius:3px;
     border:none;
     padding: 7px;
@@ -174,20 +183,20 @@
 .tamanioDeFuente{
     font-size:small;
     color:white;
-    background: black;
+    background: rgb(35, 134, 227);
     border:none;
     padding: 7px;
     border-radius: 3px;
 
 }
 .fondoTransparente{
-    background: transparent!important;
+    background: transparent;
 }
 
 .botonAlinearIzquierda , .botonCentrar , .botonAlinearDerecha , .botonContorno{
     padding: 5px;
     color: white;
-    background: black;
+    background: rgb(35, 134, 227);
     border:none;
     font-size: medium;
     border-radius: 3px;
@@ -253,7 +262,7 @@
     border-radius: 3px ;
     border:none;
     color:white;
-    background-color: black;
+    background-color: rgb(35, 134, 227);
     
 }
 
@@ -266,13 +275,13 @@
 
 .inputFondoImagen , .inputColorDeTexto , .inputFondoDeTexto{
     border:none;
-    background-color: black;
+    background-color: rgb(35, 134, 227);
     border-radius: 3px;
     padding: 5px 2px;
 }
 
 .menuSelector{
-    background: black;
+    background: rgb(35, 134, 227);
     color: white;
     padding: 10px;
     border-radius: 3px;
@@ -295,7 +304,7 @@
 }
 
 .botonReestablecer{
-    background-color: black;
+    background-color: rgb(35, 134, 227);
     border-radius: 3px;
     color: white;
     border:none;
@@ -311,6 +320,8 @@
     right: 0px;
 }
 
+/*****RESPONSIVE*****/
+
 @media screen and (min-width: 1300px){
 
     .botonCerrar{
@@ -319,5 +330,41 @@
 
     
 }
+
+@media screen and (min-width: 900px) /*and (max-width: 1299px)*/{
+    .contenedorMeme{
+        width: 40%; }
+    
+    #prueba {
+        height: 400px;
+    }
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 899px){
+
+    .tituloProject{
+        font-size: 30px;
+    }
+
+    #prueba {
+        height: 300px;
+    }
+
+    .contenedorMeme{
+        height: 100%;
+    }
+
+    .columnaDeTexto{
+        width: 250px;
+    
+    }
+
+    .columnaDeImagen{
+        width:250px;
+    }
+    
+}
+
 
 
