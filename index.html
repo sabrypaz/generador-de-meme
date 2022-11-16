@@ -30,11 +30,11 @@
     <header class="navegacion" id="navegacion">
         <h1 class="tituloProject">Generador de Memes</h1>
         <div class="contenedorDeBotones" id="contenedorDeBotones">
-            <button class="btnNav" id="botonImagen" onclick="mostrarPanelImagen();"><i class="fa-solid fa-file-image"
-                    aria-hidden="true"></i>Imagen</button>
-            <button class="btnNav" id="botonTexto" onclick="mostrarPanelTexto();"><i class="fa-solid fa-font" aria-hidden="true"></i>Texto</button>
+            <button class="btnNav" id="botonImagen"><i class="fa-solid fa-file-image"
+                    aria-hidden="true"></i>IMAGEN</button>
+            <button class="btnNav" id="botonTexto"><i class="fa-solid fa-font" aria-hidden="true"></i>TEXTO</button>
             <button class="btnNav" id="botonModo" aria-label="Cambiar pagina a modo oscuro"><i
-                    class="fa-solid fa-lightbulb"></i>Modo Oscuro</button>
+                    class="fa-solid fa-lightbulb"></i>MODO CLARO</button>
         </div>
     </header>
     <!--+++++++++++++++++++++++++++++++++SECCION CENTRAL DE MEME+++++++++++++++++++++++++++++++++-->
@@ -51,6 +51,7 @@
                     <div class="contenedorTopText" id="contenedorTop">
                         <p id="contenedorTopText">TOP TEXT</p>
                     </div>
+                    <div alt src id="prueba"></div>
 
                     <div class="contenedorBottomText" id="contenedorBottom">
                         <p id="contenedorBottomText">BOTTOM TEXT</p>
@@ -70,7 +71,7 @@
 
     <!--+++++++++++++++++++++++++++++++++SECCION ASIDE DE TEXTO++++++++++++++++++++++++++++++++++-->
 
-    <aside class="columnaDeTexto" id="columnaDeTexto" >
+    <aside class="columnaDeTexto oculto" id="columnaDeTexto" >
 
 
         <!--++++++++++++++++++++++++SECCION CONFIGURACION DE TEXTO++++++++++++++++++++++++-->
@@ -167,7 +168,7 @@
                     </div>
 
                     <div class="checkboxFondoTransparente">
-                        <input for="checkbox de fondo transparente" type="checkbox" id="checkTransparente"
+                        <input for="checkTransparente" type="checkbox" id="checkTransparente"
                             class="checkTransparente">
                         <label for="fondo transparente" aria-label="seleccionar fondo transparente">Fondo
                             transparente</label>
@@ -240,19 +241,19 @@
 
                 <div class="contenedorFondoDeImagen">
                     <div class="inputFondoImagen">
-                        <input for="color de fondo imagen" type="color" id="colorFondoImagen" class="colorFondoImagen"
+                        <input for="colorFondoImagen" type="color" id="colorFondoImagen" class="colorFondoImagen"
                             aria-label="Color de fondo de imagen" value="#FFFFFF">
                         <span id="colorDeFondo" aria-hidden="true">#FFFFFF</span>
                     </div>
 
                     <div class="selectorDeFondo">
                         <select class="menuSelector" aria-label="menú de selector de fondo" id="menuSelector">
-                            <option value="ninguno">Ninguno</option>
-                            <option value="aclarar">Aclarar</option>
-                            <option value="oscurecer">Oscurecer</option>
-                            <option value="diferencia">Diferencia</option>
-                            <option value="luminosidad">Luminosidad</option>
-                            <option value="multiplicar">Multiplicar</option>
+                            <option value="unset">Ninguno</option>
+                            <option value="lighten">Aclarar</option>
+                            <option value="darken">Oscurecer</option>
+                            <option value="difference">Diferencia</option>
+                            <option value="luminosity">Luminosidad</option>
+                            <option value="multiply">Multiplicar</option>
                         </select>
 
                     </div>
@@ -267,27 +268,27 @@
                 <h3 class="tituloImagen2">FILTROS</h3>
 
                 <div class="opcionDeFiltro">
-                    <label for="brillo" class="filtro">BRILLO</label>
+                    <label for="brightness" class="filtro">BRILLO</label>
                     <input id="brightness" type="range" min="0" max="1" step="0.1" value="1">
                 </div>
 
                 <div class="opcionDeFiltro">
-                    <label for="opacidad" class="filtro">OPACIDAD</label>
+                    <label for="opacity" class="filtro">OPACIDAD</label>
                     <input id="opacity" type="range" min="0" max="1" step="0.1" value="1">
                 </div>
 
                 <div class="opcionDeFiltro">
-                    <label for="contraste" class="filtro">CONTRASTE</label>
+                    <label for="contrast" class="filtro">CONTRASTE</label>
                     <input id="contrast" type="range" min="100" max="1000" step="1" value="100">
                 </div>
 
                 <div class="opcionDeFiltro">
-                    <label for="desenfoque" class="filtro">DESENFOQUE</label>
+                    <label for="blur" class="filtro">DESENFOQUE</label>
                     <input id="blur" type="range" min="0" max="10" step="0.1" value="0">
                 </div>
 
                 <div class="opcionDeFiltro">
-                    <label for="escala de grises" class="filtro">ESCALA DE GRISES</label>
+                    <label for="grayscale" class="filtro">ESCALA DE GRISES</label>
                     <input id="grayscale" type="range" min="0" max="100" step="1" value="0">
                 </div>
 
@@ -297,17 +298,17 @@
                 </div>
 
                 <div class="opcionDeFiltro">
-                    <label for="saturacion" class="filtro">SATURACION</label>
+                    <label for="saturation" class="filtro">SATURACION</label>
                     <input id="saturation" type="range" min="100" max="1000" step="10" value="100">
                 </div>
 
                 <div class="opcionDeFiltro">
-                    <label for="hue" class="filtro">HUE</label>
+                    <label for="hue-rotation" class="filtro">HUE</label>
                     <input id="hue-rotation" type="range" min="0" max="359" step="1" value="0">
                 </div>
 
                 <div class="opcionDeFiltro">
-                    <label for="negativo" class="filtro">NEGATIVO</label>
+                    <label for="invert" class="filtro">NEGATIVO</label>
                     <input id="invert" type="range" min="0" max="1" step="0.1" value="0">
                 </div>
 
