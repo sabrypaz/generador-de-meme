@@ -1,13 +1,3 @@
-/*const botonReestablecer = document.getElementById(botonReestablecer)
-
-botonReestablecer.addEventListener('click', (e) => {
-    if(botonReestablecer === true)
-    return{reset 
-    }
-})
-*/
-
-
 /*++++++++++++++SELECCIONAR EL ASIDE DE TEXTO/IMAGEN CON EL BOTÓN+++++++++++++++++*/
 
 
@@ -19,24 +9,15 @@ const botonTexto = document.getElementById('botonTexto');
 const botonImagen = document.getElementById('botonImagen'); 
 
 botonTexto.addEventListener('click', () => {
-    columnaDeTexto.style.display = 'block';
-    columnaDeTexto.classList.remove ='display-none';
-    columnaDeImagen.classList.add ='display-none';
-    
+    columnaDeTexto.style.display = 'block'
+    columnaDeImagen.style.display = 'none'
 });
+
+
 botonImagen.addEventListener('click', () => {
     columnaDeImagen.style.display = 'block';
-    columnaDeImagen.classList.remove ='display-none';
-    columnaDeTexto.classList.add = 'display-none';
-    
+    columnaDeTexto.style.display = 'none'
 });
-
-
-
-
-
-
-
 
 
 /*+++++++++++++++++++INSERTAR TEXTO+++++++++++++++++++*/
@@ -48,7 +29,7 @@ const contenedorTopText = document.getElementById('contenedorTopText');
 inputTopText.addEventListener('input', (event) => {
  const textoIngresado = event.target.value;
  contenedorTopText.innerHTML = textoIngresado;
-})
+});
 
 const inputTextoInferior = document.getElementById('inputTextoInferior');
 const contenedorBottomText = document.getElementById('contenedorBottomText');
@@ -77,6 +58,7 @@ sinTextoSuperior.addEventListener('input', ()=>{
     }
 });
 
+
 sinTextoInferior.addEventListener('input', ()=>{
     if(sinTextoInferior.checked){
         contenedorBottom.style.display = 'none';
@@ -86,35 +68,33 @@ sinTextoInferior.addEventListener('input', ()=>{
     }
 });
 
+
 /*++++++++++++++CAMBIAR COLOR Y FONDO DE TEXTO+++++++++++++*/
+
 
 const colorTexto = document.getElementById('color');
 const fondoTexto = document.getElementById('fondo');
-
-const contenedorTopText1 = document.getElementById('contenedorTopText');//letra
-const contenedorTop1 = document.getElementById('contenedorTop');//caja
-const contenedorBottom1 = document.getElementById('contenedorBottom');//caja
-const contenedorBottomText1 =document.getElementById('contenedorBottomText')//letra
 const tamanioDeFuente = document.getElementById('tamanioDeFuente');
 
 colorTexto.addEventListener('input', (event)=>{
-    contenedorTopText1.style.color = event.target.value;
-    contenedorBottomText1.style.color = event.target.value;
-})
+    contenedorTopText.style.color = event.target.value;
+    contenedorBottomText.style.color = event.target.value;
+});
 
 fondoTexto.addEventListener('input', (event)=>{
-    contenedorTop1.style.backgroundColor = event.target.value;
-    contenedorBottom1.style.backgroundColor = event.target.value;
-})
+    contenedorTop.style.backgroundColor = event.target.value;
+    contenedorBottom.style.backgroundColor = event.target.value;
+});
+
 
 const checkTransparente = document.getElementById('checkTransparente');
 
 checkTransparente.addEventListener('click', ()=>{
     if(checkTransparente.checked)
-    {contenedorTop1.classList.add('fondoTransparente') ;
-    contenedorBottom1.classList.add('fondoTransparente');
-    }else{contenedorTop1.classList.remove('fondoTransparente');
-    contenedorBottom1.classList.remove('fondoTransparente');
+    {contenedorTop.classList.add('fondoTransparente');
+    contenedorBottom.classList.add('fondoTransparente');
+    }else{contenedorTop.classList.remove('fondoTransparente');
+    contenedorBottom.classList.remove('fondoTransparente');
     }
 });
 
@@ -125,15 +105,16 @@ checkTransparente.addEventListener('click', ()=>{
 const seleccionDeFuente = document.getElementById('seleccionDeFuente');
 
 seleccionDeFuente.addEventListener('input',()=>{
-    contenedorTopText1.style.fontFamily = seleccionDeFuente.value;
-    contenedorBottomText1.style.fontFamily = seleccionDeFuente.value;
+    contenedorTopText.style.fontFamily = seleccionDeFuente.value;
+    contenedorBottomText.style.fontFamily = seleccionDeFuente.value;
 })
 
 
 tamanioDeFuente.addEventListener('input', ()=>{
-    contenedorTopText1.style.fontSize = `${tamanioDeFuente.value}px`;
-    contenedorBottomText1.style.fontSize = `${tamanioDeFuente.value}px`;
+    contenedorTopText.style.fontSize = `${tamanioDeFuente.value}px`;
+    contenedorBottomText.style.fontSize = `${tamanioDeFuente.value}px`;
 });
+
 
 /*+++++++++++ALINEAR TEXTO+++++++*/
 
@@ -143,37 +124,39 @@ const botonCentrar = document.getElementById('botonCentrar');
 const botonAlinearDerecha = document.getElementById('botonAlinearDerecha');
 
 botonAlinearIzquierda.addEventListener('click', ()=>{
-    contenedorTop1.style.textAlign = 'left';
-    contenedorBottom1.style.textAlign = 'left';
+    contenedorTop.style.textAlign = 'left';
+    contenedorBottom.style.textAlign = 'left';
 });
 botonCentrar.addEventListener('click', ()=>{
-    contenedorTop1.style.textAlign = 'center';
-    contenedorBottom1.style.textAlign = 'center';
+    contenedorTop.style.textAlign = 'center';
+    contenedorBottom.style.textAlign = 'center';
 });
 botonAlinearDerecha.addEventListener('click', ()=>{
-    contenedorTop1.style.textAlign = 'right';
-    contenedorBottom1.style.textAlign = 'right';
+    contenedorTop.style.textAlign = 'right';
+    contenedorBottom.style.textAlign = 'right';
 });
 
 
 /*++++++++++++++CONTORNO DE TEXTO++++++++++++++*/
+
+
 const btnNoContorno = document.getElementById('btnNoContorno');
 const btnContornoClaro = document.getElementById('btnContornoClaro');
 const btnContornoOscuro = document.getElementById('btnContornoOscuro');
 
 btnNoContorno.addEventListener('click',()=>{
-    contenedorTop1.style.textShadow = 'none';
-    contenedorBottom1.style.textShadow = 'none';
+    contenedorTop.style.textShadow = 'none';
+    contenedorBottom.style.textShadow = 'none';
 });
 
 btnContornoClaro.addEventListener('click',()=>{
-    contenedorTop1.style.textShadow = '-1px 0 grey, 0 1px grey , 0 -1px grey';
-    contenedorBottom1.style.textShadow = '-1px 0 grey, 0 1px grey, 0 -1px grey';
+    contenedorTop.style.textShadow = '-1px 0 grey, 0 1px grey , 0 -1px grey';
+    contenedorBottom.style.textShadow = '-1px 0 grey, 0 1px grey, 0 -1px grey';
 });
 
 btnContornoOscuro.addEventListener('click', ()=>{
-    contenedorTop1.style.textShadow = '-1px 0 black, 0 1px black , 0 -1px black';
-    contenedorBottom1.style.textShadow = '-1px 0 black, 0 1px black, 0 -1px black';
+    contenedorTop.style.textShadow = '-1px 0 black, 0 1px black , 0 -1px black';
+    contenedorBottom.style.textShadow = '-1px 0 black, 0 1px black, 0 -1px black';
 });
 
 
@@ -183,25 +166,26 @@ btnContornoOscuro.addEventListener('click', ()=>{
 const espaciadoDeTexto = document.getElementById('espaciadoDeTexto');
 
 const espaciado = ()=>{
-    contenedorTop1.style.paddingBottom = `${espaciadoDeTexto.value}px`
-    contenedorTop1.style.paddingTop = `${espaciadoDeTexto.value}px`
-    contenedorBottom1.style.paddingTop = `${espaciadoDeTexto.value}px`
-    contenedorBottom1.style.paddingBottom = `${espaciadoDeTexto.value}px`
+    contenedorTop.style.paddingBottom = `${espaciadoDeTexto.value}px`
+    contenedorTop.style.paddingTop = `${espaciadoDeTexto.value}px`
+    contenedorBottom.style.paddingTop = `${espaciadoDeTexto.value}px`
+    contenedorBottom.style.paddingBottom = `${espaciadoDeTexto.value}px`
 }
 espaciadoDeTexto.addEventListener('input', espaciado);
 
 
 /*+++++++++++++++++INTERLINEADO DE TEXTO++++++++++++++++*/
 
+
 const interlineado = document.getElementById('interlineado');
 
 interlineado.addEventListener('change', ()=>{
-    contenedorTop1.style.lineHeight = `${interlineado.value}`;
-    contenedorBottom1.style.lineHeight = `${interlineado.value}`;
-})
+    contenedorTop.style.lineHeight = `${interlineado.value}`;
+    contenedorBottom.style.lineHeight = `${interlineado.value}`;
+});
 
 
-/*+++++++++MODO OSCURO+++++++++++++*/
+/*+++++++++++++++++MODO CLARO+++++++++++++++++*/
 
 
 const botonModo = document.getElementById('botonModo');
@@ -215,6 +199,12 @@ botonModo.addEventListener('click', (event) => {
     container.classList.toggle('modoClaro2');
     seccionDeImagen.classList.toggle('modoClaro1');
     seccionDeTexto.classList.toggle('modoClaro1');
+    const tieneModoClaro = navegacion.classList.contains('modoClaro')
+    if(tieneModoClaro){
+        botonModo.innerHTML = `<i class="fa-solid fa-lightbulb">Modo Oscuro</i>`;
+    }else{
+        botonModo.innerHTML = `<i class="fa-solid fa-lightbulb">Modo Claro</i>`;
+    }
     
 });
 
@@ -230,17 +220,17 @@ const columnaImagen = document.getElementById('columnaDeImagen');
 
 botonClose.addEventListener('click', (event) =>{
     columnaTexto2.style.display = 'none';
-
 });    
 
 botonClose2.addEventListener('click', () => {
         columnaImagen.style.display = 'none';
+});
 
-    });
 
 /*+++++++++++FILTROS DE IMAGEN+++++++++++++*/
 
-const contenedorMeme = document.getElementById('contenedorImagen');
+
+const contenedorMeme = document.getElementById('prueba');
 const brillo = document.getElementById('brightness');
 const opacidad = document.getElementById('opacity');
 const contraste = document.getElementById('contrast');
@@ -251,10 +241,13 @@ const saturacion = document.getElementById('saturation');
 const hue = document.getElementById('hue-rotation');
 const negativo = document.getElementById('invert');
 
-function filtros () {
-    contenedorMeme.style.filter = `brightness(${brillo.value}) opacity(${opacidad.value}%) contrast(${contraste.value}%) blur(${desenfoque.value}px) grayscale(${escalaGrises.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturacion.value}%) invert(${negativo.value}))`;
 
+function filtros () {
+    contenedorMeme.style.filter = `brightness(${brillo.value}) contrast(${contraste.value}%) blur(${desenfoque.value}px) grayscale(${escalaGrises.value}%) sepia(${sepia.value}%) invert(${negativo.value}) hue-rotate(${hue.value}deg) saturate(${saturacion.value}%)`; 
+    //opacity(${opacidad.value}%)
 };
+
+
 
 brillo.addEventListener('change', filtros);
 opacidad.addEventListener('change', filtros);
@@ -265,6 +258,7 @@ sepia.addEventListener('change', filtros);
 saturacion.addEventListener('change', filtros);
 hue.addEventListener('change', filtros);
 negativo.addEventListener('change', filtros);
+
 
 
 const botonReestablecer = document.getElementById('botonReestablecer');
@@ -280,12 +274,9 @@ botonReestablecer.addEventListener('click', ()=>{
     saturacion.value = 100;
     negativo.value = 0;
     filtros();
-})
+});
 
 
-
-    
- 
 
 /*++++++++++++++FONDO DE IMAGEN++++++++++++++++*/
 
@@ -294,12 +285,12 @@ const colorFondoImagen = document.getElementById('colorFondoImagen');
 const menuSelector = document.getElementById('menuSelector');
 
 colorFondoImagen.addEventListener('input', () =>{
-    const valorDeFondo = colorFondoImagen.value;
-    contenedorImagen.style.backgroundColor = valorDeFondo;
+const colorDeFondo = colorFondoImagen.value;
+    contenedorMeme.style.backgroundColor = colorDeFondo;
 });
 
-menuSelector.addEventListener('change',()=>{
-    contenedorImagen.style.backgroundBlendMode = menuSelector.value;
+menuSelector.addEventListener('change',(event)=>{
+    contenedorMeme.style.backgroundBlendMode = event.target.value;
 })
 
 
@@ -319,12 +310,11 @@ btnDescarga.addEventListener('click', () =>
 
 
 const urlDeImagen = document.getElementById('urlDeImagen');
-const contenedorImagen1= document.getElementById('contenedorImagen')
 
 urlDeImagen.addEventListener('keyup', (e)=>{
     e.preventDefault();
     const valueUrl = urlDeImagen.value;
-    contenedorImagen1.style.backgroundImage = `url("${valueUrl}")`;
-    contenedorImagen1.style.backgroundPosition = 'center';
+    contenedorMeme.style.backgroundImage = `url("${valueUrl}")`;
+    contenedorMeme.style.backgroundPosition = 'cover';
 });
 
